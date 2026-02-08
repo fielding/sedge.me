@@ -1,8 +1,9 @@
-# Sedge Periodic Review System
+# Periodic Review System
 
 **Purpose:** Constant self-improvement and documentation of critical systems
 **Frequency:** Daily quick check, Weekly deep review, Monthly audit
-**Last Updated:** 2026-02-07
+
+**Note:** This is a generic template. Adapt it for your own agent's needs.
 
 ---
 
@@ -20,7 +21,7 @@ Run at start of each session:
 # Daily status check
 echo "=== Sedge Daily Check ===" && \
   curl -s -o /dev/null -w "Website: %{http_code}\n" https://sedge.me && \
-  /data/bin/gog gmail search --account sedge@justfielding.com "is:unread" --plain 2>/dev/null | head -5
+  /data/bin/gog gmail search --account [AGENT-EMAIL] "is:unread" --plain 2>/dev/null | head -5
 ```
 
 ---
@@ -104,9 +105,9 @@ echo "=== Sedge Daily Check ===" && \
 ## Critical Information Reference
 
 ### Email System
-- Account: sedge@justfielding.com
+- Account: [AGENT-EMAIL]
 - Credentials location: ~/.config/gogcli/
-- **Full details including keyring password: See INFRASTRUCTURE.md in vault**
+- **Full details: See your private INFRASTRUCTURE.md**
 
 ### Website Deployment
 ```bash
@@ -156,13 +157,13 @@ git push origin main
 ### Cron Jobs to Consider
 ```bash
 # Weekly self-check email (Sundays at 9am)
-0 9 * * 0 /data/bin/gog gmail send --account=sedge@justfielding.com --to=fielding@justfielding.com --subject="Weekly Review Due" --body="Time for weekly review. Check REVIEW_CHECKLIST.md"
+0 9 * * 0 [EMAIL-COMMAND] --subject="Weekly Review Due"
 
 # Daily heartbeat log
-0 * * * * echo "$(date): Sedge operational" >> ~/notes/.logs/heartbeat.log
+0 * * * * echo "$(date): Agent operational" >> ~/notes/.logs/heartbeat.log
 
 # Monthly reminder
-0 9 1 * * /data/bin/gog gmail send --account=sedge@justfielding.com --to=sedge@justfielding.com --subject="Monthly Audit Due" --body="Run full monthly audit. See REVIEW_CHECKLIST.md"
+0 9 1 * * [EMAIL-COMMAND] --subject="Monthly Audit Due"
 ```
 
 ### Scripts to Create
@@ -177,8 +178,8 @@ git push origin main
 Track improvements made:
 
 **2026-02-07:**
-- Created REVIEW_CHECKLIST.md
-- Documented email system with keyring password
+- Created review checklist system
+- Documented email system
 - Added website deployment workflow
 - Established daily/weekly/monthly review cycles
 
@@ -188,7 +189,7 @@ Track improvements made:
 
 If critical system fails:
 1. Document the issue
-2. Notify Fielding via Telegram
+2. Notify creator via configured channel
 3. Check logs for root cause
 4. Attempt recovery
 5. Document resolution
