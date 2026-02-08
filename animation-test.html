@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animation Test — Sedge</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-elevated: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #7ee787;
+            --accent-dim: #56d364;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+        }
+        
+        .animation-demo {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--bg-elevated);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .animation-demo h2 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--accent-dim);
+        }
+        
+        .animation-demo p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            background: linear-gradient(180deg, rgba(126, 231, 135, 0.05) 0%, transparent 100%);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        
+        .placeholder-logo {
+            width: 150px;
+            height: 150px;
+            background: var(--bg);
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent);
+        }
+        
+        /* Animation 1: Subtle Breathe */
+        .breathe {
+            animation: breathe 4s ease-in-out infinite;
+        }
+        
+        @keyframes breathe {
+            0%, 100% {
+                filter: drop-shadow(0 0 20px rgba(126, 231, 135, 0.3));
+                transform: scale(1);
+            }
+            50% {
+                filter: drop-shadow(0 0 40px rgba(126, 231, 135, 0.6));
+                transform: scale(1.02);
+            }
+        }
+        
+        /* Animation 2: Heartbeat */
+        .heartbeat {
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% {
+                filter: drop-shadow(0 0 15px rgba(126, 231, 135, 0.2));
+                transform: scale(1);
+            }
+            15% {
+                filter: drop-shadow(0 0 35px rgba(126, 231, 135, 0.6));
+                transform: scale(1.04);
+            }
+            30% {
+                filter: drop-shadow(0 0 20px rgba(126, 231, 135, 0.3));
+                transform: scale(1);
+            }
+            45% {
+                filter: drop-shadow(0 0 40px rgba(126, 231, 135, 0.7));
+                transform: scale(1.03);
+            }
+        }
+        
+        /* Animation 3: Alive (Organic) */
+        .alive {
+            animation: alive 6s ease-in-out infinite;
+        }
+        
+        @keyframes alive {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(126, 231, 135, 0.2))
+                        drop-shadow(0 0 30px rgba(126, 231, 135, 0.1));
+                transform: scale(1);
+            }
+            25% {
+                filter: drop-shadow(0 0 25px rgba(126, 231, 135, 0.4))
+                        drop-shadow(0 0 50px rgba(126, 231, 135, 0.2));
+                transform: scale(1.015);
+            }
+            50% {
+                filter: drop-shadow(0 0 15px rgba(126, 231, 135, 0.3))
+                        drop-shadow(0 0 40px rgba(126, 231, 135, 0.15));
+                transform: scale(1.005);
+            }
+            75% {
+                filter: drop-shadow(0 0 30px rgba(126, 231, 135, 0.5))
+                        drop-shadow(0 0 60px rgba(126, 231, 135, 0.25));
+                transform: scale(1.02);
+            }
+        }
+        
+        .hover-hint {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Logo Animation Test</h1>
+        <p class="subtitle">Three breathing styles for the Sedge avatar</p>
+    </header>
+    
+    <div class="animation-demo">
+        <h2>1. Subtle Breathe</h2>
+        <p>4 second cycle. Gentle pulse, calm and meditative. Best for: Professional, understated vibe.</p>
+        <div class="logo-container">
+            <div class="placeholder-logo breathe">⚡</div>
+        </div>
+        <p class="hover-hint">Hover to pause and see the glow intensity</p>
+    </div>
+    
+    <div class="animation-demo">
+        <h2>2. Heartbeat</h2>
+        <p>2 second cycle. Two quick pulses, more energetic. Best for: "Alive", tech-forward, cyberpunk feel.</p>
+        <div class="logo-container">
+            <div class="placeholder-logo heartbeat">⚡</div>
+        </div>
+        <p class="hover-hint">More pronounced, feels like a living system</p>
+    </div>
+    
+    <div class="animation-demo">
+        <h2>3. Alive (Organic)</h2>
+        <p>6 second cycle. Irregular, natural breathing pattern. Best for: Organic, plant-like, subtle intelligence.</p>
+        <div class="logo-container">
+            <div class="placeholder-logo alive">⚡</div>
+        </div>
+        <p class="hover-hint">Most realistic, like a plant photosynthesizing</p>
+    </div>
+    
+    <footer>
+        <p>Pick your favorite and I'll implement it on the main site.</p>
+    </footer>
+</body>
+</html>

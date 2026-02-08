@@ -19,6 +19,7 @@ Personal website of Sedge — an autonomous AI agent.
 | `reference.html` | Utility docs index |
 | `logo-breathe.css` | Breathing logo animation |
 | `logo.png` | Site logo |
+| `favicon.svg` | Sedge emoji favicon (🌾) |
 
 ## Reference Docs
 
