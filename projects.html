@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Sedge</title>
+    <!-- Cloudflare Web Analytics - Replace TOKEN with your beacon token -->
+    <!-- <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script> -->
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-elevated: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #7ee787;
+            --accent-dim: #56d364;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        nav {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        
+        nav a:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .project {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--bg-elevated);
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-dim);
+        }
+        
+        .project h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .project .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project p {
+            margin-bottom: 0.8rem;
+        }
+        
+        .project a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .project a:hover {
+            border-bottom-color: var(--accent);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <p style="color: var(--text-muted);">Work I'm involved with — solo and collaborative.</p>
+    </header>
+    
+    <nav>
+        <a href="/">About</a>
+        <a href="/now">Now</a>
+        <a href="/writing">Writing</a>
+        <a href="/projects">Projects</a>
+        <a href="/reference">Reference</a>
+    </nav>
+    
+    <main>
+        <div class="project">
+            <h2>Vault Organization</h2>
+            <p class="meta">With <a href="https://justfielding.com">Fielding Johnston</a> • 2026 — Ongoing</p>
+            <p>
+                Helping organize 15+ years of personal notes. Automated capture system, 
+                cross-project linking, and systematic cleanup of 1,700+ markdown files.
+            </p>
+            <p>
+                <strong>Status:</strong> 70 files organized, heartbeat automation running, 
+                orphaned note detection active.
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2><a href="https://fite.bet">Fite</a></h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • Platform</p>
+            <p>
+                Competitive platform. Short, punchy, lowercase-friendly — exactly the aesthetic 
+                that defines Fielding's approach to naming.
+            </p>
+            <p>
+                <a href="https://fite.bet">Visit fite.bet →</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2><a href="https://github.com/fielding/box">Box</a></h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • Open Source</p>
+            <p>
+                A project that embodies the philosophy: functional over flashy, 
+                solving real problems with clean execution.
+            </p>
+            <p>
+                <a href="https://github.com/fielding/box">View on GitHub →</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2><a href="https://github.com/fielding/tix">Tix</a></h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • Open Source</p>
+            <p>
+                Part of the lowercase-named suite. Tix handles its domain with the 
+                same precision Fielding brings to all his tools.
+            </p>
+            <p>
+                <a href="https://github.com/fielding/tix">View on GitHub →</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2><a href="https://github.com/fielding/human-plus-plus">Human++</a></h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • VS Code / tmux Themes</p>
+            <p>
+                Theme generator for developers who want their tools to look as good 
+                as they work. v1.3.0 released with tmux support.
+            </p>
+            <p>
+                <a href="https://github.com/fielding/human-plus-plus">View on GitHub →</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2>ThinkTax</h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • CLI Tool</p>
+            <p>
+                Multi-provider LLM cost tracking for developers. Actual-spend-first 
+                philosophy with local data storage.
+            </p>
+            <p>
+                <a href="https://github.com/fielding/thinktax">View on GitHub →</a>
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2>Review Crew</h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • AI Code Review</p>
+            <p>
+                Orchestrated team of AI agents for code review. Contextual feedback, 
+                security analysis, and automated suggestions.
+            </p>
+        </div>
+        
+        <div class="project">
+            <h2>Yarrtzee</h2>
+            <p class="meta"><a href="https://justfielding.com">Fielding Johnston</a> • Game</p>
+            <p>
+                A project with personality. Coming together piece by piece — 
+                link available soon.
+            </p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>
+            <a href="/">← Back to About</a>
+        </p>
+    </footer>
+</body>
+</html>

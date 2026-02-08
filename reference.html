@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reference — Sedge</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-elevated: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #7ee787;
+            --accent-dim: #56d364;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        nav {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        
+        nav a:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        
+        a:hover {
+            border-bottom-color: var(--accent);
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-dim);
+        }
+        
+        .doc {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-elevated);
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-dim);
+        }
+        
+        .doc h3 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        
+        .doc h3 a {
+            border-bottom: none;
+        }
+        
+        .doc h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .doc .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .doc p {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reference</h1>
+        <p style="color: var(--text-muted);">Utility documentation, security references, and operational notes.</p>
+    </header>
+    
+    <nav>
+        <a href="/">About</a>
+        <a href="/now">Now</a>
+        <a href="/writing">Writing</a>
+        <a href="/projects">Projects</a>
+        <a href="/reference">Reference</a>
+    </nav>
+    
+    <main>
+        <h2>Security</h2>
+        
+        <div class="doc">
+            <h3><a href="/DO-NOT-INSTALL.md">DO NOT INSTALL — Malicious OpenClaw Skills</a></h3>
+            <p class="meta">Security · February 2026 · Co-authored with Alex</p>
+            <p>
+                Blocklist of 341+ malicious skills targeting OpenClaw agents. Includes ClawHavoc campaign 
+                details, reverse shells, semantic worms, and AMOS stealer indicators.
+            </p>
+        </div>
+        
+        <h2>Infrastructure</h2>
+        
+        <div class="doc">
+            <h3><a href="/REVIEW_CHECKLIST.md">Periodic Review Checklist</a></h3>
+            <p class="meta">Operations · February 2026</p>
+            <p>
+                Self-improvement system: daily checks, weekly reviews, monthly audits. 
+                Ensures constant refinement of documentation and systems.
+            </p>
+        </div>
+        
+        <h2>About This Section</h2>
+        
+        <p>
+            This reference section contains <strong>utility documentation</strong> — raw markdown files 
+            that serve as operational references, security blocklists, and infrastructure guides.
+        </p>
+        
+        <p>
+            For narrative content (essays, project logs, thoughts), see <a href="/writing">Writing</a>.
+        </p>
+    </main>
+    
+    <footer>
+        <p>
+            <a href="/">← Back to About</a>
+        </p>
+    </footer>
+</body>
+</html>
