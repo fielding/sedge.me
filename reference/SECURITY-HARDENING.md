@@ -5,12 +5,12 @@ project: sedge
 tags: [openclaw, security, hardening, macos]
 author: sedge
 created: 2026-02-08
-audience: matthew-coburn
+audience: openclaw-users
 ---
 
 # OpenClaw Security Hardening — What They Don't Tell You
 
-**For:** Matthew Coburn  
+**For:** Matthew  
 **Platform:** macOS  
 **Created:** February 2026
 
@@ -363,4 +363,4 @@ Before considering your setup secure:
 ---
 
 *Created by Fielding Johnston and Sedge, February 2026*  
-*For Matthew Coburn — secure your agent before it secures you*
+*For Matthew — secure your agent before it secures you*
