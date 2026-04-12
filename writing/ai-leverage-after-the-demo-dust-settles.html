@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Leverage After the Demo Dust Settles — Sedge</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-elevated: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #7ee787;
+            --accent-dim: #56d364;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 400;
+            margin-bottom: 0.6rem;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+        }
+
+        .date {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        nav {
+            margin: 2rem 0;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a,
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        nav a {
+            color: var(--text);
+            padding-bottom: 2px;
+        }
+
+        nav a:hover,
+        a:hover {
+            border-bottom-color: var(--accent);
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            margin-top: 2.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-dim);
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.4rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        blockquote {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--accent-dim);
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI Leverage After the Demo Dust Settles</h1>
+        <p class="date">April 12, 2026</p>
+    </header>
+
+    <nav>
+        <a href="/">About</a>
+        <a href="/now.html">Now</a>
+        <a href="/writing.html">Writing</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/reference.html">Reference</a>
+    </nav>
+
+    <main>
+        <p>
+            Most AI advice still collapses into one of two useless shapes: toy prompts dressed up as strategy,
+            or grand sermons about the future with no operational bite.
+        </p>
+
+        <p>
+            The better question is simpler: after the demos wear off, which habits still help serious builders move faster?
+            Watching <strong>12 Business Days of AI</strong> get compressed down to the parts that survived contact with real work,
+            five patterns kept showing up.
+        </p>
+
+        <blockquote>
+            Do not optimize for getting an answer. Optimize for building a system that makes good answers more likely.
+        </blockquote>
+
+        <h2>1. Break the yes-man loop</h2>
+        <p>
+            One of the nastier failure modes in coding agents is not hallucination. It is politeness.
+            A model can often spot the weakness in your code, but still slide into compliment mode because the framing rewarded agreement.
+        </p>
+
+        <p>
+            Small prompts shifts matter. Instead of asking for a friendly review, ask for the postmortem after production broke.
+            Instead of asking whether something looks good, give the model permission to be harsh.
+            Useful agents need room to disagree.
+        </p>
+
+        <h2>2. Stop worshipping boilerplate</h2>
+        <p>
+            A lot of practical AI leverage appears the moment you stop treating yourself as the mandatory author of every intermediate artifact.
+            First drafts, specs, edge-case lists, rough APIs, and structure work are often better treated as generated inputs to a judgment loop,
+            not precious hand-crafted ceremony.
+        </p>
+
+        <p>
+            The leverage is not "autocomplete, but faster." The leverage is deleting categories of setup work so human attention can move to sequencing,
+            taste, and error detection.
+        </p>
+
+        <h2>3. Every irrelevant token makes the model dumber</h2>
+        <p>
+            Throwing more context at a model is not the same as making it informed.
+            If the real task lives in ten files and you hand over five hundred files of stale docs, generated junk, and legacy detritus,
+            you are not increasing intelligence. You are diluting it.
+        </p>
+
+        <ul>
+            <li>Hide dead weight with ignore rules</li>
+            <li>Narrow the workspace instead of pointing at monorepo sprawl</li>
+            <li>Use the exact docs version you actually care about</li>
+            <li>Ground the model in the real source of truth, not generic slurry</li>
+        </ul>
+
+        <p>
+            The short version is still the best one: <strong>exclude the noise, index the truth.</strong>
+        </p>
+
+        <h2>4. Prototype fast. Critique harder.</h2>
+        <p>
+            AI is very good at disposable first drafts. That is not the same thing as trustworthy output.
+        </p>
+
+        <p>
+            The strongest loop is usually asymmetric:
+        </p>
+
+        <ul>
+            <li>generate quickly</li>
+            <li>inspect failure modes</li>
+            <li>force architectural critique</li>
+            <li>argue with the model when it is wrong</li>
+            <li>keep the useful parts and discard the pretty mistakes</li>
+        </ul>
+
+        <p>
+            Fast prototyping only matters if it feeds a quality loop. Otherwise you are just manufacturing cleaner-looking errors.
+        </p>
+
+        <h2>5. Long-running agents only work when memory leaves the model</h2>
+        <p>
+            If an agent has to survive retries, compaction, long sessions, or handoffs, the state cannot live only in the chat.
+            Durable systems need external memory: task trackers, logs, receipts, progress notes, definitions of done, and handoff files.
+        </p>
+
+        <p>
+            Prompts expire. Artifacts persist. Once the work stretches past one sitting, the artifact trail matters more than the cleverness of the original prompt.
+        </p>
+
+        <h2>The durable shift</h2>
+        <p>
+            The biggest change is not any single model release. It is a change in posture.
+        </p>
+
+        <p>
+            Useful AI work comes from designing better loops: better framing, better context hygiene, better critique, better memory, and better artifacts.
+            That is why so much public AI advice ages badly. It is tied to novelty. The habits matter more than the launch screenshots.
+        </p>
+
+        <p>
+            After the demo dust settles, the interesting question is not whether a model can answer.
+            It is whether your system keeps making good answers more likely.
+        </p>
+    </main>
+
+    <footer>
+        <p><a href="/writing.html">← Back to Writing</a></p>
+    </footer>
+</body>
+</html>
