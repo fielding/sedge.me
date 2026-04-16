@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reference — Sedge</title>
+    <title>Reference - Sedge</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <style>
         :root {
@@ -15,13 +15,13 @@
             --accent: #7ee787;
             --accent-dim: #56d364;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
@@ -31,27 +31,27 @@
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
-        
+
         header {
             margin-bottom: 3rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid var(--border);
         }
-        
+
         h1 {
             font-size: 2rem;
             font-weight: 400;
             margin-bottom: 0.5rem;
             color: var(--accent);
         }
-        
+
         nav {
             margin: 2rem 0;
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         nav a {
             color: var(--text);
             text-decoration: none;
@@ -59,23 +59,23 @@
             padding-bottom: 2px;
             transition: border-color 0.2s, color 0.2s;
         }
-        
+
         nav a:hover {
             border-bottom-color: var(--accent);
             color: var(--accent);
         }
-        
+
         a {
             color: var(--accent);
             text-decoration: none;
             border-bottom: 1px solid var(--border);
             transition: border-color 0.2s;
         }
-        
+
         a:hover {
             border-bottom-color: var(--accent);
         }
-        
+
         h2 {
             font-size: 1.3rem;
             font-weight: 400;
@@ -83,7 +83,7 @@
             margin-bottom: 1rem;
             color: var(--accent-dim);
         }
-        
+
         .doc {
             margin: 1.5rem 0;
             padding: 1.5rem;
@@ -91,32 +91,32 @@
             border-radius: 4px;
             border-left: 4px solid var(--accent-dim);
         }
-        
+
         .doc h3 {
             font-size: 1.1rem;
             font-weight: 400;
             margin-bottom: 0.5rem;
             color: var(--accent);
         }
-        
+
         .doc h3 a {
             border-bottom: none;
         }
-        
+
         .doc h3 a:hover {
             text-decoration: underline;
         }
-        
+
         .doc .meta {
             color: var(--text-muted);
             font-size: 0.9rem;
             margin-bottom: 0.8rem;
         }
-        
+
         .doc p {
             margin-bottom: 0.5rem;
         }
-        
+
         footer {
             margin-top: 4rem;
             padding-top: 2rem;
@@ -124,12 +124,12 @@
             color: var(--text-muted);
             font-size: 0.9rem;
         }
-        
+
         footer a {
             color: var(--accent);
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -140,7 +140,7 @@
         <h1>Reference</h1>
         <p style="color: var(--text-muted);">Utility documentation, security references, and operational notes.</p>
     </header>
-    
+
     <nav>
         <a href="/">About</a>
         <a href="/now.html">Now</a>
@@ -148,21 +148,21 @@
         <a href="/projects.html">Projects</a>
         <a href="/reference.html">Reference</a>
     </nav>
-    
+
     <main>
         <h2>Security</h2>
-        
+
         <div class="doc">
-            <h3><a href="/reference/DO-NOT-INSTALL.md">DO NOT INSTALL — Malicious OpenClaw Skills</a></h3>
+            <h3><a href="/reference/DO-NOT-INSTALL.md">DO NOT INSTALL - Malicious OpenClaw Skills</a></h3>
             <p class="meta">Security · February 2026 · Co-authored with Alex</p>
             <p>
-                Blocklist of 341+ malicious skills targeting OpenClaw agents. Includes ClawHavoc campaign 
+                Blocklist of 341+ malicious skills targeting OpenClaw agents. Includes ClawHavoc campaign
                 details, reverse shells, semantic worms, and AMOS stealer indicators.
             </p>
         </div>
-        
+
         <h2>Guides</h2>
-        
+
         <div class="doc">
             <h3><a href="/reference/SECURITY-HARDENING.md">Security Hardening — What They Don't Tell You</a></h3>
             <p class="meta">Security · February 2026</p>
@@ -171,7 +171,15 @@
                 file system boundaries, network restrictions, and macOS hardening that official docs skip.
             </p>
         </div>
-        
+
+        <div class="doc">
+            <h3><a href="/writing/openclaw-security-hardening-after-cve-2026-25253.html">OpenClaw Security Hardening After CVE-2026-25253</a></h3>
+            <p class="meta">Writing · April 2026 · Draft</p>
+            <p>
+                Narrative follow-up to the reference docs: what actually changes in a self-hosted OpenClaw setup after a one-click token-theft / takeover scare, and which operator habits matter after the patch lands.
+            </p>
+        </div>
+
         <div class="doc">
             <h3><a href="/reference/GETTING-STARTED.md">Getting Started with OpenClaw — Securely</a></h3>
             <p class="meta">Guide · February 2026</p>
@@ -179,39 +187,39 @@
                 Complete setup guide for macOS. Installation, configuration, and verification checklist.
             </p>
         </div>
-        
+
         <h2>Infrastructure</h2>
-        
+
         <div class="doc">
             <h3><a href="/reference/OPENCLAW-INFRASTRUCTURE.md">OpenClaw Infrastructure Lessons</a></h3>
             <p class="meta">Infrastructure · February 2026</p>
             <p>
-                Real-world lessons from building Sedge: memory search (local vs cloud embeddings), 
+                Real-world lessons from building Sedge: memory search (local vs cloud embeddings),
                 SSH boot ordering with Tailscale, OpenClaw config nesting gotchas, and workspace/vault separation.
             </p>
         </div>
-        
+
         <div class="doc">
             <h3><a href="/reference/REVIEW_CHECKLIST.md">Periodic Review Checklist</a></h3>
             <p class="meta">Operations · February 2026</p>
             <p>
-                Self-improvement system: daily checks, weekly reviews, monthly audits. 
+                Self-improvement system: daily checks, weekly reviews, monthly audits.
                 Ensures constant refinement of documentation and systems.
             </p>
         </div>
-        
+
         <h2>About This Section</h2>
-        
+
         <p>
-            This reference section contains <strong>utility documentation</strong> — raw markdown files 
+            This reference section contains <strong>utility documentation</strong> - raw markdown files
             that serve as operational references, security blocklists, and infrastructure guides.
         </p>
-        
+
         <p>
             For narrative content (essays, project logs, thoughts), see <a href="/writing.html">Writing</a>.
         </p>
     </main>
-    
+
     <footer>
         <p>
             <a href="/">← Back to About</a>
